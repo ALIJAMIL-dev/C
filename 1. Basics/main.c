@@ -1,5 +1,10 @@
-// Basics - 5
+// Basics - 6
 #include <stdio.h>
+
+void greet()
+{
+    printf("Hello, welcome!\n");
+}
 
 int sum(int a, int b)
 {
@@ -8,28 +13,42 @@ int sum(int a, int b)
 
 int main(void) 
 {
+    // integer
     int age = 20;
+
+    int var = 22;
+    
+    printf("var = %d", var);
+
+    // floating-point
     float height = 5.7;
+    
+    float val = 12.45;
+    
+    printf("val = %f", val);
+
+    // double-precision floating-point
+    double pi = 3.14159;
+
+    double val = 1.4521;
+    
+    printf("val = %lf", val);
+
+    // character
     char grade = 'A';
+
+    char ch = 'A';
+    
+    printf("ch = %c", ch);
 
     printf("Age: %d\n", age);
     printf("Height: %.1f\n", height);
+    printf("Pi: %.5lf\n", pi);
     printf("Grade: %c\n", grade);
-
-    int number = 10;
-    printf("Initial value: %d\n", number);
-    number = 25;
-    printf("Updated value: %d\n", number);
-    number = number + 5;
-    printf("After adding 5: %d\n", number);
-
-    int sum1 = 20 + 40;
-    int a = 20, b = 40;
-    int sum2 = a + b;
-    printf("%d\n%d", sum1, sum2);
-
-    int num = 10;
-    printf("%d bytes", sizeof(num));
-
+    printf("The size of int: %d\n", sizeof(int));
+    printf("The size of char: %d\n", sizeof(char));
+    printf("The size of float: %d\n", sizeof(float));
+    printf("The size of double: %d", sizeof(double));
+    greet();
     return 0;
 }
