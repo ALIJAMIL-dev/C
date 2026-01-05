@@ -1,44 +1,75 @@
-// Basics - 7
+// Basics - 8
 #include <stdio.h>
 
-int main(void) 
+int main(void)
 {
-    fputs("This is my string\n", stdout);
+    // Arithmetic Operators
+    int a = 25, b = 5;
+    printf("a + b = %d\n", a + b);
+    printf("a - b = %d\n", a - b);
+    printf("a * b = %d\n", a * b);
+    printf("a / b = %d\n", a / b);
+    printf("a %% b = %d\n", a % b);
+    printf("+a = %d\n", +a);
+    printf("-a = %d\n", -a);
+    printf("a++ = %d\n", a++);
+    printf("a-- = %d\n", a--);
 
-    // scanf("formatted_string", address_of_variables/values);
+    // Relational Operators
+    // O is False, 1 is True
+    printf("a < b  : %d\n", a < b);
+    printf("a > b  : %d\n", a > b);
+    printf("a <= b: %d\n", a <= b);
+    printf("a >= b: %d\n", a >= b);
+    printf("a == b: %d\n", a == b);
+    printf("a != b : %d\n", a != b);
+
+    // Logical Operators
+    printf("a && b : %d\n", a && b);
+    printf("a || b : %d\n", a || b);
+    printf("!a: %d\n", !a);
+
+    // Bitwise Operators
+    printf("a & b: %d\n", a & b);
+    printf("a | b: %d\n", a | b);
+    printf("a ^ b: %d\n", a ^ b);
+    printf("~a: %d\n", ~a);
+    printf("a >> b: %d\n", a >> b);
+    printf("a << b: %d\n", a << b);
+
+    // Assignment Operators
+    printf("a = b: %d\n", a = b);
+    printf("a += b: %d\n", a += b);
+    printf("a -= b: %d\n", a -= b);
+    printf("a *= b: %d\n", a *= b);
+    printf("a /= b: %d\n", a /= b);
+    printf("a %%= b: %d\n", a %= b);
+    printf("a &= b: %d\n", a &= b);
+    printf("a |= b: %d\n", a |= b);
+    printf("a ^= b: %d\n", a ^= b);
+    printf("a >>= b: %d\n", a >>= b); 
+    printf("a <<= b: %d\n", a <<= b);
+
+    // Others 
     
-    int age1;
-    printf("Enter your age: ");
-  
-    // Reads an integer
-    scanf("%d", &age1);  
-  
-    // Prints the age
-    printf("Age is: %d\n", age1);  
+    /*
+    sizeof (operand)
+    operand1 , operand2
+    expression1 ? Expression2 : Expression3;
+    structure_variable . member;
+    structure_pointer -> member;
+    (new_type) operand;
 
-    char ch;
-    printf("Enter a character: \n");
-  
-    // Reads an Character
-    scanf("%c", &ch);  
-  
-    // Prints the Character
-    printf("Entered character is: %c\n", ch);  
+    */
 
-    char str[100];  // Declare an array to hold the input string
+    int num = 10;
+    int* add_of_num = &num;
 
-    printf("Enter a string: ");
-    scanf("%s", str);  // Reads input until the first space or newline
+    printf("sizeof(num) = %d bytes\n", sizeof(num));
+    printf("&num = %p\n", &num);
+    printf("*add_of_num = %d\n", *add_of_num);
+    printf("(10 < 5) ? 10 : 20 = %d\n", (10 < 5) ? 10 : 20);
+    printf("(float)num = %f\n", (float)num);
 
-    printf("You entered: %s\n", str);
-
-    // String variable
-    char name[20];
-    
-    printf("Enter your name: \n");
-    fgets(name, sizeof(name), stdin);
-    
-    printf("Hello, %s", name);
-    
     return 0;
 }
